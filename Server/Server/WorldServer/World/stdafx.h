@@ -1,14 +1,24 @@
-// stdafx.h : 标准系统包含文件的包含文件，
-// 或是经常使用但不常更改的
-// 特定于项目的包含文件
+// stdafx.h : 锟斤拷准系统锟斤拷锟斤拷锟侥硷拷锟侥帮拷锟斤拷锟侥硷拷锟斤拷
+// 锟斤拷锟角撅拷锟斤拷使锟矫碉拷锟斤拷锟斤拷锟斤拷锟侥碉拷
+// 锟截讹拷锟斤拷锟斤拷目锟侥帮拷锟斤拷锟侥硷拷
 //
+
+#ifdef __WINDOWS__
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0601  // Windows 7
+#endif
+#ifndef WINVER
+#define WINVER 0x0601
+#endif
+#ifndef _WIN64
+#define _USE_32BIT_TIME_T
+#endif
+#endif
 
 #pragma once
 
-
 #ifdef __WINDOWS__
-#define WIN32_LEAN_AND_MEAN		// 从 Windows 头中排除极少使用的资料
-#define _USE_32BIT_TIME_T
+#include <windows.h>
 #include <tchar.h>
 #endif
 
@@ -31,4 +41,4 @@
 #include "GameStruct_Finger.h"
 #include "Packet.h"
 //#include "fileapi.h"
-// TODO: 在此处引用程序需要的其他头文件
+// TODO: 锟节此达拷锟斤拷锟矫筹拷锟斤拷锟斤拷要锟斤拷锟斤拷锟斤拷头锟侥硷拷
